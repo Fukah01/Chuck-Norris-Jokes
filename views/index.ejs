@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>123</h1>
+
+    <form action="/" method="POST">
+        <select name="category" id="category">
+            <option value="animal">animal</option>
+            <option value="career">career</option>
+            <option value="celebrity">celebrity</option>
+            <option value="dev">dev</option>
+            <option value="explicit">explicit</option>
+            <option value="fashion">fashion</option>
+            <option value="food">food</option>
+            <option value="history">history</option>
+            <option value="money">money</option>
+            <option value="movie">movie</option>
+            <option value="music">music</option>
+        </select>
+        <button type="submit">get your quote</button>
+
+        <% if (data) { %>
+            <p><strong>Chuck Norris Joke:</strong> <%= data.value %></p>
+        <% } %>
+    
+        
+
+        
+    
+        
+    </form>
+</body>
+</html>
