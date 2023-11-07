@@ -12,22 +12,14 @@ const apiUrl = 'https://api.chucknorris.io/jokes';
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', async (req, res) => {
-  try {
-    const categoriesResponse = await axios.get(`${apiUrl}/categories`);
-    const categories = categoriesResponse.data;
-    res.render('index.ejs', { categories });
-  } catch (error) {
-    console.error("Failed to retrieve categories:", error.message);
-    res.render("index.ejs", {
-      error: "Failed to retrieve categories.",
-    });
-  }
-});
+app.get('/', (req,res) =>{
+  res.render('index.ejs');
+})
 
 app.post("/", async (req, res) => {
   try {
     const category = req.body.category;
+    console.log(category);
     if (category) {
       const response = await axios.get(`${apiUrl}/random?category=${category}`);
       const result = response.data;
