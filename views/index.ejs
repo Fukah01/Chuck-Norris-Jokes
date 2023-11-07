@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>123</h1>
+    <h1>Get your Joke or Chuck Norris will get you</h1>
 
     <form action="/" method="POST">
         <select name="category" id="category">
@@ -23,17 +23,12 @@
             <option value="movie">movie</option>
             <option value="music">music</option>
         </select>
-        <button type="submit">get your quote</button>
+        <button type="submit">get your joke</button>
 
         <% if (data) { %>
             <p><strong>Chuck Norris Joke:</strong> <%= data.value %></p>
         <% } %>
     
-        
-
-        
-    
-        
     </form>
 </body>
 </html>
